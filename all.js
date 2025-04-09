@@ -19,3 +19,12 @@ document.getElementById('calcBtn').onclick = function () {
     
     // alert('總金額：' + (price * qty));
 };
+
+document.getElementById('resetBtn').onclick = function () {
+    // 清除輸入框內容
+    document.getElementById('priceId').value = '';
+    document.getElementById('quantityId').value = '';
+
+    // 清除結果顯示內容
+    document.getElementById('resultId').textContent = '';
+};
