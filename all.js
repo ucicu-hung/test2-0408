@@ -17,5 +17,5 @@ document.getElementById('calcBtn').onclick = function () {
     var qty = parseInt(document.getElementById('quantityId').value);
     document.getElementById('resultId').textContent = '總金額：' + (price * qty);
     
-    alert('總金額：' + (price * qty));
+    // alert('總金額：' + (price * qty));
 };
