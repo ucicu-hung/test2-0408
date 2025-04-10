@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>運算式：加++</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <style>
+        .box{
+    width: 100%;
+    max-width: 600px; /* 最大不能超過 600px */
+    border:1px solid #000;
+}
+
+@media screen and (max-width: 768px) {
+    max-width:100%; /* 小於 768px 顯示全寬 */
+}
+    </style> -->
+</head>
+<body>
+    <!-- 預計做我的作品集，要先建立陣列，再做內容 -->
+    <!-- 建立陣列：使用[]，裡面放東西，用逗號隔開 -->
+    <!-- 陣列的長度：用length -->
+    <!-- 增加陣列：用push() -->
+
+    <!-- JavaScript : Array.prototype.pop()/.shift().splice() -->
+    <!-- 刪除陣列：用pop() --> <!--pop 方法可以從陣列的末尾刪除一個元素並返回它的值。--> 
+    <!-- 刪除陣列：用shift() --> <!---shift 方法可以從陣列的開頭刪除一個元素並返回它。-->
+    <!-- 刪除陣列：用splice() --> 
+    <!-- 列出共有幾個 -->
+    <!-- <h1>前端練習小卡 #001</h1> -->
+    <div class="box">
+        <div class="content">
+            <!-- future content -->
+        </div>
+        <div>
+            <button id="addBtn">＋</button>
+            <div id="result"> 很讚 0</div>
+            <!-- future content ：移除喜歡 -->
+        </div>
+    </div>
+    
+    <script>
+        let count = 0
+        document.getElementById("addBtn").onclick = function(){
+            count++;
+            document.getElementById("result").textContent = '喜歡' + count;
+        }
+    </script>
+</body>
+</html>

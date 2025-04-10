@@ -120,3 +120,4 @@ document.getElementById('resetBtn').onclick = function () {
     document.getElementById('resultId').textContent = '';
     document.getElementById('priceId').focus();
 };
+

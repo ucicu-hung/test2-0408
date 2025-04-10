@@ -1,0 +1,51 @@
+*,*::after,*::before{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-color: cadetblue; */
+    padding: 12px 12px;
+}
+/* input:active,
+.button:active{
+    border: 1px solid blue;
+}
+input,
+.button{
+    width: 49%;
+    height: 30px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: aliceblue;
+}
+.button{
+    width: 30px;
+    height: 30px;
+}
+.button:hover{
+    background-color: rgb(163, 185, 204);
+} */
+
+/* commits */
+.d-flex{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.mb-1{
+    margin-bottom: 8px;
+}
+
+
+.box{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px; /* 最大不能超過 600px */
+    border:1px solid red;
+}
+
+@media screen and (max-width: 768px) {
+    max-width:100%; /* 小於 768px 顯示全寬 */
+}
