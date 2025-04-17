@@ -58,12 +58,17 @@ input,
     flex-wrap: wrap;
 }
 .col-4{
-    width: 33.333%;
+    width: 33.3333%;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 
 @media screen and (max-width: 768px) {
-    max-width:100%; /* 小於 768px 顯示全寬 */
+    /*max-width:100%; /* 小於 768px 顯示全寬 */
+    .col-4 {
+        width: 100%;
+    }
 }
 
 /* ----------------------- 
@@ -83,7 +88,7 @@ commits.css
 }
 
 .dBox{
-    flex: 1;
+    /* flex: 1; */
     display: flex;
     flex-direction: column;
     border: 1px solid gray;
