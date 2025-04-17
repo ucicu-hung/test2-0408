@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的第一個程式運算式：計算機</title>
+    <style>
+        *,*::after,*::before{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: cadetblue;
+            padding: 12px 12px;
+        }
+        input:active,
+        .button:active{
+            border: 1px solid blue;
+        }
+        input,
+        .button{
+            width: 49%;
+            height: 30px;
+            border: 0px;
+            border-radius: 4px;
+            background-color: aliceblue;
+        }
+        .button{
+            width: 30px;
+            height: 30px;
+        }
+        .button:hover{
+            background-color: rgb(163, 185, 204);
+        }
+
+        /* commits */
+        .d-flex{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        .mb-1{
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>計算機</h1>
+    <div class="d-flex mb-1">
+        <input id="priceId" value="" placeholder="金額">
+        <input id="quantityId" value="" placeholder="数量">
+    </div>
+    <button class="button" id="addBtn">＋</button>
+    <button class="button" id="minusBtn">－</button>
+    <button class="button" id="timedbyBtn">ｘ</button>
+    <button class="button" id="dividedbyBtn">／</button>
+    
+    <!-- <button id="calcBtn">計算金額</button> -->
+    <button class="button" id="resetBtn">清除</button>
+    <div id="resultId"></div>
+
+    <script src="all.js"></script>
+</body>
+</html>
+
