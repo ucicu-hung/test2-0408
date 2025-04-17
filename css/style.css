@@ -4,8 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+	--dory-color: cadetblue;
+}
+
+
 body{
-    /* background-color: cadetblue; */
+    background-color:  var(--dory-color);
     padding: 12px 12px;
 }
 /* input:active,
