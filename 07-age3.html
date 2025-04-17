@@ -23,13 +23,7 @@
             // 年齡判斷
             var age = currentYear - birthYear;
 
-            // 根據年齡判斷是否可以投票
-            // if ( age >= 20 ){
-            //     console.log("你可以投標了");
-            // } else { 
-            //     console.log("你還未滿20歲，不能投票喔");
-            // }   
-
+            // 根據年齡判斷
             if ( age <= 10 ){
                 console.log("你還是個小朋友呢");
             } else if ( age >= 11 && age <= 20 ){
@@ -41,6 +35,8 @@
             }
 
             document.getElementById("result").textContent = `你今年 ${age} 歲了！`;
+
+            // 換算
         }
     </script>
 </body>

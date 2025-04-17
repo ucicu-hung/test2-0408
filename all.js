@@ -121,3 +121,4 @@ document.getElementById('resetBtn').onclick = function () {
     document.getElementById('priceId').focus();
 };
 
+document.getElementById('priceId').textContent = last;

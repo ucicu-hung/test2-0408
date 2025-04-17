@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 :root{
-	--dory-color: cadetblue;
+	--dory-color: rgba(245, 249, 245, 0); //cadetblue;
 }
 
 
@@ -42,7 +42,9 @@ input,
 .mb-1{
     margin-bottom: 8px;
 }
+.m-1{  margin: 8px 8px; }
 
+.p-1{  padding: 8px 8px; }
 
 .box{
     width: 100%;
@@ -51,6 +53,42 @@ input,
     border:1px solid red;
 }
 
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-4{
+    width: 33.333%;
+}
+
+
 @media screen and (max-width: 768px) {
     max-width:100%; /* 小於 768px 顯示全寬 */
 }
+
+/* ----------------------- 
+Animated.css 
+----------------------- */
+/* headShake */
+
+/* ----------------------- 
+commits.css
+----------------------- */
+.dContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    /* max-width: 800px; */
+}
+
+.dBox{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+}
+.dMain{
+    background-color:  var(--dory-color);
+}
+.dItem{}
