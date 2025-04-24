@@ -4,20 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS作品</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+        .portfolio-item {
+            border: 1px solid #ccc;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+            .like-btn {
+            background-color: #e7f3ff;
+            border: 1px solid #88b;
+            padding: 0.5em;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+    </style>
 </head>
 <body>
+    <!-- <div class="menu">
+        <li><a href="00-quantity.html">add</a></li>
+        <li><a href="02-loveadd.html">loveadd</a></li>
+        <li><a href="03-array.html">陣列</a></li>
+        <li><a href="04-multiple.html">九九乘法表</a></li>
+        <li><a href="05-age.html">計算年齡</a></li>
+        <li><a href="06-age2.html">計算+判斷</a></li>
+        <li><a href="07-age3.html">計算+判斷</a></li>
+    </div> -->
+    <div id="portfolioContainer"></div>
     
-    <a href="00-quantity.html">add</a>
-    <a href="01-add.html">add</a>
-    <a href="02-loveadd.html">loveadd</a>
-    <a href="03-array.html">陣列</a>
-    <a href="04-multiple.html">九九乘法表</a>
-    <a href="05-age.html">計算年齡</a>
-    <a href="06-age2.html">計算+判斷</a>
-    <a href="07-age3.html">計算+判斷</a>
 
-    <div class="row dContainer">
+    <!-- <div class="row dContainer">
         <div class="col-4 dBox p-1">
             <div class="dMain mb-1">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet saepe sint ea odit quisquam aut, a voluptatibus voluptatum nisi, culpa, eaque consequuntur deserunt quas amet hic quo eum distinctio maiores?
@@ -79,15 +95,87 @@
             </div>
         </div>
         
-    </div>
+    </div> -->
 
     <!-- Js -->
     <script>
-        let count = 0
-        document.getElementById("addBtn").onclick = function(){
-            count++;
-            document.getElementById("result").textContent = '喜歡' + count;
+        //我想做出，按下喜歡的按鈕動作，就有喜歡累加的數字的。
+        //抓出按下喜歡的按鈕
+        //統計喜歡的數字
+
+        // var portfolio = [
+        //     {
+        //         portfolioTitle: '九九乘法',
+        //         like: 20,
+        //     },
+        //     {
+        //         portfolioTitle: '計算機',
+        //         like: 50,
+        //     },
+        // ];
+
+        // function portfolieOrders(portfolioList){
+        //     var totalLike = 0;
+
+        //     for( var i = 0; i < portfolioList.length; i++ ){
+        //         var title = portfolioList[i].portfolioTitle;
+        //         var like = portfolioList[i].totalLike;
+
+        //         console.log( title + "喜歡數" + like );
+        //         totalLike += like;
+                
+        //     }
+        //     console.log("總共喜歡數" + totalLike);
+        // }
+        // portfolieOrders(portfolio);
+
+
+        var portfolio = [
+        {
+            portfolioTitle: '九九乘法',
+            like: 0,
+        },
+        {
+            portfolioTitle: '計算機',
+            like: 10,
+        },
+        ];
+
+        //作品集的包裝起來
+        function renderPortfolio(list) {
+        //拿到 HTML 裡面你要放作品的位置（這個 <div id="portfolioContainer"> 是作品清單的家）。
+        var container = document.getElementById("portfolioContainer");
+        //清空舊的內容，每次重畫不會堆在一起。就像你畫畫前會換乾淨畫紙。
+        container.innerHTML = "";
+
+        for (let i = 0; i < list.length; i++) {
+            var item = document.createElement("div");
+            item.className = "portfolio-item";
+
+            var title = document.createElement("h3");
+            title.innerText = list[i].portfolioTitle;
+
+            var likeCount = document.createElement("p");
+            likeCount.innerText = "喜歡數: " + list[i].like;
+            likeCount.id = "likeCount" + i;
+
+            var button = document.createElement("button");
+            button.innerText = "喜歡";
+            button.className = "like-btn";
+            button.addEventListener("click", function () {
+            list[i].like++;
+            document.getElementById("likeCount" + i).innerText = "喜歡數: " + list[i].like;
+            });
+
+            item.appendChild(title);
+            item.appendChild(likeCount);
+            item.appendChild(button);
+
+            container.appendChild(item);
         }
+        }
+
+        renderPortfolio(portfolio);
     </script>
 
 </body>

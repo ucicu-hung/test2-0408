@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox vs col-* Grid</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    .flexbox-demo .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px;
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+    .flexbox-demo .item {
+      background-color: #88c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      min-width: 100px;
+    }
+    .grid-demo .row {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #f8f8f8;
+      padding: 10px;
+    }
+    .grid-demo .col-6 {
+      width: 50%;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: #c88;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Flexbox vs Grid col-*</h1>
+
+  <h2>🔹 Flexbox 範例</h2>
+  <div class="flexbox-demo">
+    <div class="container">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+      <div class="item">Item 7</div>
+    </div>
+  </div>
+
+  <h2>🔸 col-* Grid 範例（Bootstrap風格）</h2>
+  <div class="grid-demo">
+    <div class="row">
+      <div class="col-6">Column 1</div>
+      <div class="col-6">Column 2</div>
+    </div>
+    <div class="row">
+      <div class="col-6">Column 3</div>
+      <div class="col-6">Column 4</div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox vs col-* Grid</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+      background: #f8f9fa;
+    }
+    h2 {
+      margin-top: 3rem;
+    }
+    .flexbox-demo, .grid-demo {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .flexbox-demo .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #e3f2fd;
+      padding: 1rem;
+    }
+    .flexbox-demo .item {
+      background: #2196f3;
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      flex: 1;
+      margin: 0 0.5rem;
+      text-align: center;
+    }
+    .grid-demo .row {
+      display: flex;
+      background: #fff3cd;
+      padding: 1rem;
+    }
+    .grid-demo .col-6 {
+      width: 50%;
+      padding: 1rem;
+      background: #ffc107;
+      color: black;
+      border-radius: 0.5rem;
+      margin: 0 0.5rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Flexbox vs col-* Grid 系統比較</h1>
+
+  <h2>🔹 Flexbox 範例</h2>
+  <div class="flexbox-demo">
+    <div class="container">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+     
+    </div>
+  </div>
+
+  <h2>🔸 Grid col-* 範例</h2>
+  <div class="grid-demo">
+    <div class="row">
+      <div class="col-6">Left 50%</div>
+      <div class="col-6">Right 50%</div>
+      <div class="col-6">Left 50%</div>
+      <div class="col-6">Right 50%</div>
+    </div>
+  </div>
+
+  <p>上方兩種方法展示了 Flexbox 與欄位切割系統（如 Bootstrap col-6）的差異，Flexbox 適合用來處理項目對齊與彈性分配，Grid 則適合規劃整體結構。</p>
+</body>
+</html>
