@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if 是有條件下的篩選機制(只取出條件下的數值)</title>
+</head>
+<body>
+    <p>漢堡120元</p>
+<p>可樂60元</p>
+<p>我要 <input type="text" id="hamNumId"> 個漢堡+ <input type="text" id="cokeNumId"> 杯可樂</p>
+<button type="button" id="countId" value="計算">計算</button>
+<p>總共是 <spna id="totalId"></spna>元</p>
+
+
+    <!-- script 開始 -->
+    <script>
+        //存取屬性
+// let age =person.age;
+// let age =person["age"];
+// let age =person[x];
+
+//1
+// const person = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 50,
+//     eyeColor: "blue",
+// };
+
+// //新增屬性
+// person.nationality ="English";
+// document.getElementById("demo").innerHTML = person.firstName + " is " + person.nationality;
+
+//★ typeof, parseInt 
+// 1. 用 document.getElementById() 取得 id 被選取的元素
+document.getElementById('countId').onclick = function(){
+    // 2. 透過 .value 取得 id 被選取的元素的值
+    //var hamNum = document.getElementById('hamNumId').value; //hamNumId
+    //命名變數為抓取 input 裡面的數值，所以要用 value
+    
+    //4 定義變數的值
+    var hamPrice = 50;
+    var cokePrice = 20;
+  
+    //3+4
+    var hamNum = parseInt(document.getElementById('hamNumId').value) * hamPrice;
+      console.log(typeof(hamNum));
+        //印出為什麼都是"string"
+        //因為 .value 這個屬性，本質就是字串，哪怕你的 <input> 是 type="number"，HTML規範中 .value 都是傳回字串。
+      alert(hamNum);
+    //var cokeNum = document.getElementById('cokeNumId').value; //cokeNumId
+    var cokeNum = parseInt(document.getElementById('cokeNumId').value) * cokePrice;
+      console.log(typeof(cokeNum));
+      alert(hamNum);
+  
+    document.getElementById('totalId').textContent = hamNum + cokeNum;
+}
+    </script>
+</body>
+</html>
