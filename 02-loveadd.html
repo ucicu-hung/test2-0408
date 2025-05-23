@@ -5,18 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>運算式：加++</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <style>
-        .box{
-    width: 100%;
-    max-width: 600px; /* 最大不能超過 600px */
-    border:1px solid #000;
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+*,*::after,*::before{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+	--dory-color: rgba(245, 249, 245, 0);  /*cadetblue; */
+    --dory-color-white: #efeeee;
+    --dory-color-blue: rgb(163, 185, 204);
 }
 
-@media screen and (max-width: 768px) {
-    max-width:100%; /* 小於 768px 顯示全寬 */
+
+body{
+    background-color:  var(--dory-color);
+    padding: 12px 12px;
 }
-    </style> -->
+/* input:active,
+.button:active{
+    border: 1px solid blue;
+}
+input,
+.button{
+    width: 49%;
+    height: 30px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: aliceblue;
+}
+.button{
+    width: 30px;
+    height: 30px;
+}
+.button:hover{
+    background-color: rgb(163, 185, 204);
+} */
+
+/* commits */
+.d-flex{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.mb-1{
+    margin-bottom: 8px;
+}
+.m-1{  margin: 8px 8px; }
+
+.p-1{  padding: 8px 8px; }
+
+.box{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px; /* 最大不能超過 600px */
+    border:1px solid red;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-4{
+    width: 33.3333%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    /*max-width:100%; /* 小於 768px 顯示全寬 */
+    .col-4 {
+        width: 100%;
+    }
+}
+
+/* ----------------------- 
+Animated.css 
+----------------------- */
+/* headShake */
+
+/* ----------------------- 
+commits.css
+----------------------- */
+.menu{
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+}
+.menu li{
+    width: 100px;
+    text-align: center;
+    /* border: 1px solid #000; */
+    margin: 0 2px;
+}
+.menu li a{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    background-color: var(--dory-color-white);
+}
+.menu li a:hover{
+    background-color: var(--dory-color-blue);
+}
+.dContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    /* max-width: 800px; */
+}
+
+.dBox{
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+}
+.dMain{
+    background-color:  var(--dory-color);
+}
+.dItem{
+
+}
+    </style>
 </head>
 <body>
     <!-- 預計做我的作品集，要先建立陣列，再做內容 -->
