@@ -123,14 +123,14 @@ body {
   flex-basis: calc(33% - 30px);
   background-color: #eee;
 }
-@media screen and (max-width: 576px) {
-  .blog-list li.blog-item {
-    flex-basis: 100%;
-  }
-}
 @media screen and (max-width: 992px) {
   .blog-list li.blog-item {
     flex-basis: calc(50% - 30px);
+  }
+}
+@media screen and (max-width: 576px) {
+  .blog-list li.blog-item {
+    flex-basis: 100%;
   }
 }
 .blog-list img {
